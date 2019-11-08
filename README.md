@@ -9,7 +9,7 @@ npm install csv-columns2md -g
 
 ## Usage
 
-csv-columns2md data.csv -c [1,2,5-7,10]
+csv2md data.csv -c 1,2,5-7,10
 
 Columns: 1,2,5,6,7 and 10 from data.csv will be converted to Markdown file data.md
 

@@ -1,6 +1,6 @@
 {
   "name": "csv-columns2md",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Select columns from csv file and then convert them to markdown file",
   "main": "src/index.js",
   "files": [

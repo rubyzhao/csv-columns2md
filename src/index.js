@@ -13,25 +13,25 @@ const argv = yargs
   .usage(
     `Select columns from csv file and then convert them to markdown file
 (c) 2014-2019 by Rubyzhao, MIT License
-Usage: $0 csvFile [options]`,
+Usage: csv2md csvFile [options]`,
   )
   .option('columns', {
     alias: 'c',
     description: 'Columns are be selected',
     type: 'string',
   })
-  .example(`csv-columns2md data.csv`,
+  .example(`csv2md data.csv`,
     `Converts data.csv to data.md file`)
 
   .example(
-    `csv-columns2md data.csv -c 1,2,5-7,10
+    `csv2md data.csv -c 1,2,5-7,10
 Select columns: 1,2,5,6,7 and 10 from data.csv, then convert them to data.md file`,
   )
   .help('h')
   .alias('h', 'help')
   .argv;
 
-const csvFileName = process.argv[1];
+const csvFileName = process.argv[2];
 const mdFileName = path.basename(csvFileName, '.csv') + '.md';
 //console.log(mdFileName);
 
