@@ -7,7 +7,7 @@
     "/src", "/bin"
   ],
   "bin": {
-    "csv2md": "./bin/csv-columns.js"
+    "csv2md": "./bin/csv-columns2md.js"
   },
   "scripts": {
     "test": "mocha",
