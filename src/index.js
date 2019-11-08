@@ -8,8 +8,8 @@ const yargs = require('yargs');
 
 module.exports = csvSelectedCols2md;
 
-
 const argv = yargs
+  .version()
   .usage(
     `Select columns from csv file and then convert them to markdown file
 (c) 2014-2019 by Rubyzhao, MIT License
@@ -20,8 +20,8 @@ Usage: csv2md csvFile [options]`,
     description: 'Columns are be selected',
     type: 'string',
   })
-  .example(`csv2md data.csv`,
-    `Converts data.csv to data.md file`)
+  .example(`csv2md data.csv
+    Converts data.csv to data.md file`)
 
   .example(
     `csv2md data.csv -c 1,2,5-7,10
