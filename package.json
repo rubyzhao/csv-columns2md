@@ -1,0 +1,56 @@
+{
+  "name": "csv-columns2md",
+  "version": "0.1.0",
+  "description": "Select columns from csv file and then convert them to markdown file",
+  "main": "src/index.js",
+  "files": [
+    "/src", "/bin"
+  ],
+  "bin": {
+    "csv2md": "./bin/csv-columns.js"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "nyc report --reporter=text-lcov > coverage.lcov",
+    "test-ci": "npm run test && npm run test-cov",
+    "test-c8": "c8 node src/index.js ./test/data.md",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubyzhao/csv-columns2md.git"
+  },
+  "homepage": "https://github.com/rubyzhao/csv-columns2md#readme",
+  "engines": {
+    "node": ">=12.11.1"
+  },
+  "bugs": {
+    "url": "https://github.com/rubyzhao/csv-columns2md/issues"
+  },
+  "keywords": [
+    "csv",
+    "markdown",
+    "converter",
+    "md"
+  ],
+  "author": "RubyZhao",
+
+  "license": "MIT",
+  
+  "dependencies": {
+    "yargs": "^11.0.0",
+    "csv-parse":"^4.6.5",
+    "lodash":"^4.17.15"
+
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.2.2"
+  }
+
+}
